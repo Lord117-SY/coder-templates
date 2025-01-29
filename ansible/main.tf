@@ -46,6 +46,16 @@ resource "coder_agent" "main" {
 
     # Start code-server in the background.
     /tmp/code-server/bin/code-server --auth none --port 13337 >/tmp/code-server.log 2>&1 &
+    #/tmp/code-server/bin/code-server --install-extension catppuccin.catppuccin-vsc
+    #/tmp/code-server/bin/code-server --install-extension catppuccin.catppuccin-vsc-icons
+    #/tmp/code-server/bin/code-server --install-extension ms-ceintl.vscode-language-pack-fr
+    /tmp/code-server/bin/code-server --install-extension ms-python.debugpy
+    /tmp/code-server/bin/code-server --install-extension ms-python.python
+    /tmp/code-server/bin/code-server --install-extension oderwat.indent-rainbow
+    /tmp/code-server/bin/code-server --install-extension redhat.ansible
+    /tmp/code-server/bin/code-server --install-extension redhat.vscode-yaml
+    /tmp/code-server/bin/code-server --install-extension shardulm94.trailing-spaces
+    /tmp/code-server/bin/code-server --install-extension srobert0560.sr-ansible-snippets
 
   EOT
 
